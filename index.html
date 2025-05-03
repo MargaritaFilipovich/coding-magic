@@ -8,36 +8,75 @@
     <title></title>
     <script type="module" crossorigin src="./commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="./assets/vendor-6837a909.js">
-    <link rel="stylesheet" href="./assets/index-26966599.css">
+    <link rel="stylesheet" href="./assets/index-6289148c.css">
   </head>
   <body>
     <header>
-  <div class="container">
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      Launch coding-magic
-    </button>
-
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            ...
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
-        </div>
-      </div>
+  <nav class="navbar">
+    <div class="logo">Coding Magic</div>
+    <ul class="nav-links">
+      <li class="links-text">
+        <a href="#">Інтерактив</a></li>
+      <li class="links-text">
+        <a href="#">Наша команда</a>
+      </li>
+      <li class="links-text">
+        <a href="#">Контакти</a>
+      </li>
+    </ul>
+    <div class="theme-toggle">
+      <input type="checkbox" id="toggleTheme" />
+      <label for="toggleTheme"></label>
     </div>
-  </div>
+    <span class="hi-user">Вітаємо, User!</span>
+  </nav>
 </header>
+    <div class="modal-window">
+    <!-- Перше модальне вікно -->
+    <div class="modal-overlay" id="welcomeModal">
+        <div class="modal">
+            <span class="close-btn" id="closeWelcome">×</span>
+            <div class="modal-content">
+                <h2>Привіт!</h2>
+                <p>Ви потрапили на сайт інтерактивних ігор та завдань.<br>
+                    Надіємось, що вам сподобається і ви отримаєте позитивні емоції!<br>
+                    Бажаємо Вам гарно провести час!</p>
+
+                <h2>Введіть своє ім’я:</h2>
+                <div class="icons-username-1">
+                    <img src="img/sword-icon.png" alt="icon" />
+                    <img src="img/game-icon.png" alt="icon" />
+                </div>
+                <input type="text" id="username" placeholder="Ваше ім’я..." />
+                <div class="icons-username">
+                    <img src="img/puzzle-icon.png" alt="icon" />
+                    <img src="img/tic-icon.png" alt="icon" />
+                </div>
+            </div>
+            <button id="saveBtn">Зберегти</button>
+        </div>
+    </div>
+    
+
+    <!-- Друге модальне вікно -->
+    <div class="modal-overlay" id="thankYouModal">
+        <div class="modal">
+            <span class="close-btn" id="closeThanks">×</span>
+            <div class="modal-overlay-div">
+                <div class="icons">
+                    <img src="img/sword-icon.png" alt="icon" />
+                    <img src="img/game-icon.png" alt="icon" />
+                </div>
+                <h3>Дякую за підписку!</h3>
+                <div class="icons">
+                    <img src="img/puzzle-icon.png" alt="icon" />
+                    <img src="img/tic-icon.png" alt="icon" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
     
 
     
