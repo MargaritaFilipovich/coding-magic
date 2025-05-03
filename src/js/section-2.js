@@ -1,5 +1,5 @@
 function checkGuess() {
-    const userGuess = parseInt(document.getElementById('guess-input').value);
+    const userGuess = parseInt(document.getElementById('guess-number').value);
     const resultDiv = document.getElementById('guess-result');
     const secretNumber = Math.floor(Math.random() * 10) + 1;
 
@@ -11,3 +11,5 @@ function checkGuess() {
       resultDiv.innerHTML = `Ні, комп’ютер загадав ${secretNumber}`;
     }
   }
+
+  document.querySelector('.guess-button').addEventListener('click', checkGuess);
