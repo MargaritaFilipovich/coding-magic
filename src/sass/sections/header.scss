@@ -68,5 +68,64 @@ body {
   .nav-links li {
     position: relative;
   }
+
+  .dropdown-menu{
+   border-top: none;
+   border-radius: 0px 0px 20px 20px;
+   border-width: 2px;
+   border-color: #121212;
+  
+   
+}
+
+.dropdown-li{
+  padding: 10px;
+  justify-content: center;
+  
+}
+
+.theme-toggle .icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  z-index: 1;
+  transition: opacity 0.3s;
+}
+
+.theme-toggle .moon {
+  left: 6px;
+  opacity: 1;
+}
+
+.theme-toggle .sun {
+  right: 6px;
+  opacity: 0;
+}
+
+.theme-toggle input:checked + label::after {
+  left: 21px;
+}
+
+.theme-toggle input:checked + label .moon {
+  opacity: 0;
+}
+
+.theme-toggle input:checked + label .sun {
+  opacity: 1;
+}
+
+/* Темна тема */
+.dark-theme {
+  background-color: #121212;
+  color: white;
+}
+
+.dark-theme .navbar {
+  background-color: #1e1e1e;
+}
+
+
+
   
   
