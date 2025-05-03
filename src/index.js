@@ -1,3 +1,5 @@
 import * as bootstrap from '../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js'
-import './js/header.js';
+import './js/header.js'; 
+import './js/modal-window.js';
 import './js/section-2.js';
+
