@@ -1,0 +1,72 @@
+body {
+    font-family: Montserrat Alternates;
+    font-family: sans-serif;
+    background-color: white;
+    color: rgb(0, 0, 0);
+    
+  }
+  
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px;
+    background-color: #FFFFFF;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+  }
+
+
+  .links-text {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .theme-toggle input[type="checkbox"] {
+    display: none;
+  }
+  
+  .theme-toggle label {
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    background-color: gray;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .theme-toggle label::after {
+    content: "";
+    width: 18px;
+    height: 18px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    transition: 0.3s;
+  }
+  
+  .theme-toggle input:checked + label::after {
+    left: 21px;
+  }
+  
+  .dark-theme {
+    background-color: #121212;
+    color: white;
+  }
+  
+  .dark-theme .navbar {
+    background-color: #1e1e1e;
+  }
+
+  .nav-links li {
+    position: relative;
+  }
+  
+  
