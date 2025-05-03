@@ -1,6 +1,6 @@
 function checkGuess() {
-    const userGuess = parseInt(document.getElementById('guess').value);
-    const resultDiv = document.getElementById('result');
+    const userGuess = parseInt(document.getElementById('guess-input').value);
+    const resultDiv = document.getElementById('guess-result');
     const secretNumber = Math.floor(Math.random() * 10) + 1;
 
     if (userGuess === secretNumber) {

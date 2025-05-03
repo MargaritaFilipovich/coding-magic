@@ -1,20 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
+<section>
     <h1>Вгадай число, яке загадав комп’ютер</h1>
 
     <div class="game-wrapper">
       <div class="input-container">
-        <input type="number" id="guess" placeholder="Введіть число" min="1" max="10">
-        <button onclick="checkGuess()">
+        <input class="guess-input" type="number" id="guess-number" placeholder="Введіть число" min="1" max="10">
+        <button class="guess-button" onclick="checkGuess()">
           <img src="img/Group 104.png" alt="#">
         </button>
       </div>
-      <div id="result"></div>
+      <div id="guess-result"></div>
     </div>
-</body>
-</html>
+</section>
