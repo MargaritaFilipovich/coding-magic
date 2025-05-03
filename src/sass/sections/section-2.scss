@@ -1,0 +1,36 @@
+body {
+    font-family: Montserrat, Alternates;
+    text-align: center;
+    margin-top: 100px;
+  }
+  .game-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .input-container {
+    display: flex;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-right: 415px;
+  }
+  input[type="number"] {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    width: 160px;
+    background-color: rgba(215, 215, 215, 1);
+  }
+  button {
+    padding: 10px 16px;
+    background-color: black;
+    color: rgba(126, 126, 126, 1);
+    border: none;
+    cursor: pointer;
+  }
+  #result {
+    margin-left: 20px;
+    font-size: 18px;
+    min-width: 220px;
+    text-align: left;
+  }
