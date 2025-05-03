@@ -1,20 +1,37 @@
 <header>
   
   <nav class="navbar">
-    <div class="logo">Coding Magic</div>
+    <img src="./public/img/group-4.svg">
     <ul class="nav-links">
-      <li class="links-text">
-        <a href="#">Інтерактив</a></li>
-      <li class="links-text">
-        <a href="#">Наша команда</a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Інтерактив
+        </a>
+        <ul class="dropdown-menu">
+          <li class="dropdown-li">
+            <a class="dropdown-item" href="#">Числовий</a>
+          </li>
+          <li class="dropdown-li">
+            <a class="dropdown-item" href="#">Ігровий</a>
+          </li>
+          <li class="dropdown-li">
+            <a class="dropdown-item" href="#">Ознайомчий</a>
+          </li>
+        </ul>
       </li>
-      <li class="links-text">
-        <a href="#">Контакти</a>
+      
+        <a class="links-text" href="#">Наша команда</a>
+      </li>
+      <li>
+        <a class="links-text" href="#">Контакти</a>
       </li>
     </ul>
     <div class="theme-toggle">
       <input type="checkbox" id="toggleTheme" />
-      <label for="toggleTheme"></label>
+      <label for="toggleTheme">
+        <span class="icon moon">🌙</span>
+    <span class="icon sun">☀️</span>
+      </label>
     </div>
     <span class="hi-user">Вітаємо, User!</span>
   </nav>
