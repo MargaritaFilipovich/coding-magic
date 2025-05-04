@@ -39,14 +39,19 @@
   }
   
   .modal button {
-    background: black;
-    color: white;
-    padding: 10px 25px;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
+    width: 200px;
+    padding: 10px 20px; 
     font-size: 16px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    transition: box-shadow 0.3s ease;
+    justify-content: center;
+    margin-left: 200px; 
   }
+  
   
   .close-btn {
     position: absolute;
@@ -55,10 +60,6 @@
     font-size: 20px;
     cursor: pointer;
   }
-
-
-
-
   .icons {
     display: flex;
     justify-content: space-around;
@@ -86,7 +87,7 @@
 
 
   #thankYouModal {
-    display: none; /* Це вже є */
+    display: none;
   }
   #thankYouModal .modal {
     position: relative;
@@ -116,8 +117,10 @@
 
   /* Стилі для першого модального вікна */
 #welcomeModal .modal {
-    width: 576px;
-    height: 316px;
+  width: 600px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
   }
   
   .icons {
@@ -142,7 +145,6 @@
   }
   .modal-content{
     width: 500px;
-    height: 223px;
     margin-left: 50px; 
   }
   
