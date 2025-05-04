@@ -10,6 +10,7 @@ function closeModal(id) {
     const name = document.getElementById("username").value;
     if (name.trim() !== "") {
       localStorage.setItem("username", name);
+      document.querySelector(".hi-user").textContent=name;
       closeModal("welcomeModal");
       showModal("thankYouModal");
     } else {
@@ -22,7 +23,7 @@ function closeModal(id) {
     if (!name) {
       showModal("welcomeModal");
     }
-  
+    document.querySelector(".hi-user").textContent=name;
     document.getElementById("saveBtn").addEventListener("click", saveName);
     document.getElementById("closeWelcome").addEventListener("click", () => closeModal("welcomeModal"));
     document.getElementById("closeThanks").addEventListener("click", () => closeModal("thankYouModal"));
