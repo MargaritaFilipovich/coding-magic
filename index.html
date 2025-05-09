@@ -9,7 +9,7 @@
     <script type="module" crossorigin src="./commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="./assets/vendor-cf4eae9b.js">
     <link rel="stylesheet" href="./assets/vendor-45676771.css">
-    <link rel="stylesheet" href="./assets/index-739be7f1.css">
+    <link rel="stylesheet" href="./assets/index-6a36428a.css">
   </head>
   <body>
     <header>
@@ -111,6 +111,22 @@
         </div>
     </div>
 </section>
+    <h1>Калькулятор</h1>
+<div class="calculator">
+  <input type="number" id="num1" placeholder="Введіть число">
+
+  <div class="operations">
+    <button onclick="setOperation('+')">+</button>
+    <button onclick="setOperation('-')">−</button>
+    <button onclick="setOperation('*')">*</button>
+    <button onclick="setOperation('/')">/</button>
+  </div>
+
+  <input type="number" id="num2" placeholder="Введіть число">
+  <button id="equals" onclick="calculate()">=</button>
+  <input type="text" id="result" placeholder="Результат" disabled>
+</div>
+
     
 
     
