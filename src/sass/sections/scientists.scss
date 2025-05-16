@@ -1,0 +1,61 @@
+.container-scientists {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.cont-2 {
+    margin-top: 40px;
+    width: 600px;
+    padding-top: 36px;
+    border-top: solid 1px;
+    position: relative;
+}
+
+.select-s {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin-bottom: 36px;
+}
+.box-s {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 36px;
+    column-gap: 60px;
+    margin-bottom: 36px;
+}
+.box-cart-s {
+    width: 100px;
+    height: 100px;
+    background-color: #D9D9D9;
+    border-radius: 20px;
+    border: none;
+}
+.box-s-button-cart {
+    background-color: #000000;
+    color: white;
+    box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.3);
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+
+}
+
+.box-s-button {
+    width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.box-s-button-border {
+    width: 600px;
+    height: 0;
+    border-bottom: 1px solid black;
+    margin: 0 auto;
+    padding-bottom: 36px;
+}
