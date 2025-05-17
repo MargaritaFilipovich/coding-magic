@@ -10,5 +10,25 @@
 
 @import "./sections/calculator.scss";
 @import "./sections/sec.scss";
+@import "./sections/hh.scss";
+@import "./sections/scientists.scss";
 
 
+
+
+
+
+
+
+
+
+
+main{
+  background-image:url("../public/img/background.png");
+  background-repeat:no-repeat ;
+  background-size: cover;
+}
+
+body{
+    margin: 0;
+}

@@ -1,4 +1,4 @@
-.modal-overlay {
+.modal-overlay-window {
     position: fixed;
     top: 0;
     left: 0;
@@ -11,7 +11,7 @@
     z-index: 999;
   }
   
-  .modal {
+  .modall-window {
     background: white;
     padding: 30px 40px;
     border-radius: 12px;
@@ -21,16 +21,16 @@
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
   }
   
-  .modal h2 {
+  .modall-window h2 {
     margin-bottom: 5px;
   }
   
-  .modal p {
+  .modall-window p {
     font-size: 14px;
     margin-bottom: 10px;
   }
   
-  .modal input {
+  .modall-window input {
     padding: 10px;
     width: 80%;
     margin-bottom: 15px;
@@ -38,7 +38,7 @@
     border: 1px solid #ccc;
   }
   
-  .modal button {
+  .modall-window button {
     width: 200px;
     padding: 10px 20px; 
     font-size: 16px;
@@ -143,7 +143,7 @@
         margin-bottom: 30px; /* Відступ між верхнім/нижнім рядком */
       
   }
-  .modal-content{
+  .modal-content-window{
     width: 500px;
     margin-left: 50px; 
   }
