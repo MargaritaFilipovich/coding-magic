@@ -1,7 +1,7 @@
 function convertTime() {
       const seconds = parseInt(document.getElementById("secondsInput").value, 10);
       if (isNaN(seconds) || seconds < 0) {
-        document.getElementById("result").innerText = "Некоректне число.";
+        document.getElementById("result-sec").innerText = "Некоректне число.";
         return;
       }
 
@@ -10,6 +10,8 @@ function convertTime() {
       const minutes = Math.floor((seconds % 3600) / 60);
       const secunds = seconds % 60;
 
-      document.getElementById("result").innerText =
+      document.getElementById("result-sec").innerText =
         `${days} дн. ${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(secunds).padStart(2, '0')}`;
     }
+
+    document.querySelector('.convertBtn').addEventListener('click', convertTime);
