@@ -148,3 +148,64 @@
     margin-left: 50px; 
   }
   
+  @media (max-width: 768px) {
+    .modall-window {
+      width: 90%;
+      padding: 20px;
+    }
+  
+    .modal-content-window {
+      width: 100%;
+      margin-left: 0;
+    }
+  
+    .modall-window input {
+      width: 100%;
+    }
+  
+    .modall-window button {
+      width: 100%;
+      margin-left: 0;
+    }
+  
+    .icons,
+    .icons-username,
+    .icons-username-1 {
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+  
+    .icons img,
+    .icons-username img,
+    .icons-username-1 img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .modall-window {
+      padding: 15px;
+    }
+  
+    .modall-window h2 {
+      font-size: 18px;
+    }
+  
+    .modall-window p {
+      font-size: 13px;
+    }
+  
+    .modall-window button {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    .close-btn {
+      top: 5px;
+      right: 10px;
+      font-size: 18px;
+    }
+  }
