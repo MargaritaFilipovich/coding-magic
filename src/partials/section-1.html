@@ -1,31 +1,28 @@
+
 <section class="section-section1">
-<h2 class="h2-section1">Перевір в який рік ти народився</h2>
-<form id="yearForm">
-<div class="table-section1">
-  <div class="row-section1">
-    <div class="cell-section1">
-      <label for="sum">
-        <h2>Рік:</h2>
-      </label>
-    </div>
-    <div class="cell-section1">
-      <input
-        type="text"
-        name="sum"
-        id="sum"
-        required
-        placeholder="Введіть рік"
-      />
-    </div>
-    <div class="caption-section1">
-      <button type="submit"><img class="img-section1" src="/public/img/free-icon-font-search (1).png" alt="#"></button>
-    </div>
-  </div>
-</div>
-<span id="result" class="return_zhe return_zhe_view" style="display: none;"></span>
-</form>
-
-<hr />
-
-
-</section>
+    <h2 class="h2-section1">Перевір, в який рік ти народився</h2>
+  
+    <form id="yearForm" class="form-section1">
+      <div class="input-result-container">
+        <div class="input-wrapper">
+          <input
+            class="guesss-input"
+            type="numberr"
+            name="sum"
+            id="sum"
+            required
+            placeholder="Введіть рік народження"
+            min="0"
+          />
+          <button class="search-btn" type="submit">
+            <img class="imgg" src="/public/img/free-icon-font-search (1).png" alt="#" />
+          </button>
+        </div>
+  
+        <span id="result" class="return_zhe return_zhe_view" style="display: none;"></span>
+      </div>
+    </form>
+  
+    <hr />
+ 
+  </section>
