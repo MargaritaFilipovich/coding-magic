@@ -9,6 +9,11 @@ body {
     font-size: 12px;
     text-decoration: none;
     line-height: 52px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 600;
+    margin-top: 61px;
+    margin-bottom: 59px;
+    margin-right: 187px;
 };
 
 .footer-email-input .input{
@@ -19,17 +24,36 @@ body {
     padding-right: 80px;
     padding-bottom: 10px;
     padding-left: 10px;
-    border-radius: 10px;;
+    border-radius: 40px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 400;
+    margin-top: 97px;
+    margin-bottom: 18px
 };
 
 .footer-email-input .p{
     font-size: 6px;
     color: black;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 400;
 };
 
 .footer-button{
     background-color: black;
     color: white;
     border-radius: 10px;  
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 400;
+    margin-left: 36px;
+    margin-top: 97px;
+    margin-right: 174px;
 };
 
+.logo-footer{
+    height: 70px;
+    width: 165px;
+    margin-top: 75px;
+    margin-bottom: 75px;
+    margin-left: 175px;
+    margin-right: 185px;
+}
