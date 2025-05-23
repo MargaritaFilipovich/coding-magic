@@ -10,7 +10,7 @@
     <script type="module" crossorigin src="./commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="./assets/vendor-cf4eae9b.js">
     <link rel="stylesheet" href="./assets/vendor-45676771.css">
-    <link rel="stylesheet" href="./assets/index-6322f82a.css">
+    <link rel="stylesheet" href="./assets/index-69752911.css">
   </head>
   <body>
     <main class="main-back">
@@ -176,23 +176,23 @@
   </div>
   </div>
 
-    
-  <section class="game-section">
-    <h2>Google динозавр</h2>
-    <canvas id="dino-game" width="600" height="150"></canvas>
-  </section>
+    <div id="game">
+
+    <div id="dino"></div>
+    <div id="ground"></div>
+    <div id="score">Очки: 0</div>
+  </div>
+
+  <script src="/js/dino.js"></script>
 
   
 
 
-    <section class="game-section">
-    <h2>Футбол</h2>
-    <div class="football-field" id="football-field">
-      <div class="ball" id="ball"></div>
-    </div>
-  </section>
-
-  <script src="script.js"></script>
+    <div id="game">
+  <h1>Счёт: <span id="score">0</span></h1>
+  <canvas id="gameCanvas" width="800" height="400"></canvas>
+</div>
+<script src="/js/football.js"></script>
     <section>
   <div class="container">
     <div class="container-time">
