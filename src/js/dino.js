@@ -1,94 +1,97 @@
-const canvas = document.getElementById("dino-game");
-const ctx = canvas.getContext("2d");
+const game = document.getElementById('game');
+const dino = document.getElementById('dino');
+const scoreDisplay = document.getElementById('score');
 
-// Динозавр
-const dino = {
-  x: 50,
-  y: 110,
-  width: 30,
-  height: 30,
-  velocityY: 0,
-  gravity: 1.5,
-  jumping: false,
-};
-
-// Кактус
-let cactus = {
-  x: 600,
-  y: 120,
-  width: 20,
-  height: 30,
-  speed: 6,
-};
-
-// Очки
+let isJumping = false;
 let score = 0;
 let gameOver = false;
 
-function drawDino() {
-  ctx.fillStyle = "green";
-  ctx.fillRect(dino.x, dino.y, dino.width, dino.height);
+// Прыжок динозавра
+function jump() {
+  if (isJumping) return;
+  isJumping = true;
+  let position = 30; // bottom px
+
+  // Вверх
+  const upInterval = setInterval(() => {
+    if (position >= 150) {
+      clearInterval(upInterval);
+
+      // Вниз
+      const downInterval = setInterval(() => {
+        if (position <= 30) {
+          clearInterval(downInterval);
+          isJumping = false;
+        }
+        position -= 10;
+        dino.style.bottom = position + 'px';
+      }, 20);
+    } else {
+      position += 10;
+      dino.style.bottom = position + 'px';
+    }
+  }, 20);
 }
 
-function drawCactus() {
-  ctx.fillStyle = "brown";
-  ctx.fillRect(cactus.x, cactus.y, cactus.width, cactus.height);
-}
-
-function drawScore() {
-  ctx.fillStyle = "black";
-  ctx.font = "20px sans-serif";
-  ctx.fillText("Очки: " + score, 10, 20);
-}
-
-function update() {
+// Создаем препятствия
+function createObstacle() {
   if (gameOver) return;
 
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  const obstacle = document.createElement('div');
+  obstacle.classList.add('obstacle');
+  obstacle.style.left = '800px';
+  game.appendChild(obstacle);
 
-  // Гравітація
-  if (dino.jumping) {
-    dino.velocityY += dino.gravity;
-    dino.y += dino.velocityY;
+  let obstaclePos = 800;
+  const obstacleSpeed = 6;
 
-    if (dino.y >= 110) {
-      dino.y = 110;
-      dino.jumping = false;
-      dino.velocityY = 0;
+  const moveObstacle = setInterval(() => {
+    if (gameOver) {
+      clearInterval(moveObstacle);
+      if (obstacle.parentElement) {
+        obstacle.parentElement.removeChild(obstacle);
+      }
+      return;
     }
-  }
 
-  // Рух кактуса
-  cactus.x -= cactus.speed;
+    obstaclePos -= obstacleSpeed;
+    obstacle.style.left = obstaclePos + 'px';
 
-  if (cactus.x + cactus.width < 0) {
-    cactus.x = canvas.width + Math.random() * 300;
-    score++;
-  }
+    // Проверка столкновения
+    const dinoRect = dino.getBoundingClientRect();
+    const obsRect = obstacle.getBoundingClientRect();
 
-  // Перевірка зіткнення
-  if (
-    dino.x < cactus.x + cactus.width &&
-    dino.x + dino.width > cactus.x &&
-    dino.y < cactus.y + cactus.height
-  ) {
-    gameOver = true;
-    alert("Гру завершено! Твої очки: " + score);
-    location.reload();
-  }
+    if (
+      obsRect.left < dinoRect.right &&
+      obsRect.right > dinoRect.left &&
+      obsRect.bottom > dinoRect.top &&
+      obsRect.top < dinoRect.bottom
+    ) {
+      gameOver = true;
+      alert('Game Over! Очки: ' + score);
+      location.reload();
+    }
 
-  drawDino();
-  drawCactus();
-  drawScore();
+    // Увеличение очков, когда препятствие пройдено
+    if (obstaclePos < 0) {
+      clearInterval(moveObstacle);
+      if (obstacle.parentElement) {
+        obstacle.parentElement.removeChild(obstacle);
+      }
+      score++;
+      scoreDisplay.textContent = 'Очки: ' + score;
+    }
+  }, 20);
 
-  requestAnimationFrame(update);
+  // Следующее препятствие через рандомный интервал
+  setTimeout(createObstacle, 1500 + Math.random() * 2000);
 }
 
-document.addEventListener("keydown", (e) => {
-  if (e.code === "Space" && !dino.jumping) {
-    dino.jumping = true;
-    dino.velocityY = -20;
+// Запуск игры
+document.addEventListener('keydown', e => {
+  if ((e.code === 'Space' || e.code === 'ArrowUp') && !gameOver) {
+    jump();
   }
 });
 
-update();
+createObstacle();
