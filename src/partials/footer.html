@@ -1,4 +1,5 @@
-<footer class="coding-magic-footer">
+    <body>
+        <footer class="coding-magic-footer">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600&display=swap" rel="stylesheet">
     <div class="container">
         <div class="footer-content">
@@ -18,9 +19,26 @@
         </div>
         <div class="footer-email-input">
             <input type="email" placeholder="Ваша ел. адреса...">
-            <button class="footer-button">Підписатись</button>
+            <button class="footer-button" id="openThanks">Підписатись</button>
             <p>*Підписавшись, Ви зможете ортимувати інформаццію про новинки на сайті</p>
         </div>
     </div>
     </div>
 </footer>
+    <div class="modal-overlay-window" id="thankYouModal">
+        <div class="modall-window">
+            <span class="close-btn" id="closeThanks">×</span>
+            <div class="modal-overlay-div">
+                <div class="icons">
+                    <img src="./public/img/sword-icon.png" alt="icon" />
+                    <img src="./public/img/game-icon.png" alt="icon" />
+                </div>
+                <h3>Дякую за підписку!</h3>
+                <div class="icons">
+                    <img src="./public/img/puzzle-icon.png" alt="icon" />
+                    <img src="./public/img/tic-icon.png" alt="icon" />
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>

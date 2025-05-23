@@ -77,3 +77,37 @@ body, html {
         margin-left: 328px;
         margin-right: 328px;
     }
+
+    @media (max-width: 768px) {
+  .carousel-wrapper {
+    padding: 2rem 1rem;
+  }
+
+  .carousel {
+    max-width: 100%;
+  }
+
+  .carousel-item img {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+  }
+
+  .carousel-item h5 {
+    font-size: 1.1rem;
+  }
+
+  .carousel-item p {
+    font-size: 0.9rem;
+    padding: 0 10px;
+  }
+
+  .section-title h5 {
+    font-size: 18px;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none;
+  }
+}

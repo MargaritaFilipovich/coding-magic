@@ -4,6 +4,19 @@ body {
     background-color: white;
 };
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
 .footer-contacts-list-item{
     color: black;
     font-size: 12px;
@@ -56,4 +69,35 @@ body {
     margin-bottom: 75px;
     margin-left: 175px;
     margin-right: 185px;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-info,
+  .footer-email-input {
+    flex: 1 1 100%;
+    margin: 10px 0;
+  }
+
+  .footer-button {
+    width: 100%;
+  }
+
+  .footer-email-input input[type="email"] {
+    width: 100%;
+  }
+
+  .footer-logo-cm {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .logo-footer {
+    margin: 0;
+  }
 }
