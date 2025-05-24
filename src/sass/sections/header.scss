@@ -129,6 +129,72 @@ body {
 
 
 
+@media (max-width: 500px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .theme-toggle {
+    order: 1;
+  }
+
+  .hi-user {
+    order: 2;
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .nav-links .dropdown-menu {
+    position: static;
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Надто вузькі екрани */
+@media (max-width: 400px) {
+  .navbar {
+    padding: 16px;
+  }
+
+  .theme-toggle label {
+    width: 36px;
+    height: 18px;
+  }
+
+  .theme-toggle label::after {
+    width: 16px;
+    height: 16px;
+  }
+
+  .theme-toggle input:checked + label::after {
+    left: 18px;
+  }
+}
+
+
+
+
+
+
 
 
 

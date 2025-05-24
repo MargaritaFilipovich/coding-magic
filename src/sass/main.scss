@@ -9,7 +9,7 @@
 @import "./sections/section-num.scss";
 
 @import "./sections/calculator.scss";
-@import "./sections/dino.scss";
+//@import "./sections/dino.scss";
 @import "./sections/football.scss";
 @import "./sections/sec.scss";
 @import "./sections/hh.scss";
@@ -31,6 +31,8 @@ main{
   background-image:url("../public/img/background.png");
   background-repeat:no-repeat ;
   background-size: cover;
+  flex-direction: column;
+  gap: 54px;
 }
 
 body{
