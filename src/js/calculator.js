@@ -1,14 +1,14 @@
     let operation = '+';
 
-    document.querySelectorAll('.operations button').forEach(button => {
+    document.querySelectorAll('.operations_calc button').forEach(button => {
       button.addEventListener('click', () => {
         operation = button.getAttribute('data-op');
       });
     });
 
-    document.getElementById('equals').addEventListener('click', () => {
-      const a = parseFloat(document.getElementById('num1').value);
-      const b = parseFloat(document.getElementById('num2').value);
+    document.getElementById('equals_calc').addEventListener('click', () => {
+      const a = parseFloat(document.getElementById('number-calc1').value);
+      const b = parseFloat(document.getElementById('number-calc2').value);
       let result = '';
 
       if (isNaN(a) || isNaN(b)) {
@@ -25,5 +25,5 @@
         }
       }
 
-      document.getElementById('result').value = result;
+      document.getElementById('result_calc').value = result;
     });
