@@ -9,9 +9,9 @@
     <title></title>
     <script type="module" crossorigin src="./commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="./assets/vendor-6837a909.js">
-    <link rel="stylesheet" href="./assets/index-35dd28e0.css">
+    <link rel="stylesheet" href="./assets/index-0c38049e.css">
   </head>
-  <body>
+  <body class="no-scroll">
 
        <header>
   
@@ -23,22 +23,25 @@
           Інтерактив
         </a>
         <ul class="dropdown-menu">
-          <li class="dropdown-li">
-            <a class="dropdown-item" href="#">Числовий</a>
+           <li class="dropdown-li">
+            <a class="dropdown-item" href="#" data-category="all">Всі секції</a>
           </li>
           <li class="dropdown-li">
-            <a class="dropdown-item" href="#">Ігровий</a>
+            <a class="dropdown-item" href="#" data-category="numbers">Числовий</a>
           </li>
           <li class="dropdown-li">
-            <a class="dropdown-item" href="#">Ознайомчий</a>
+            <a class="dropdown-item" href="#" data-category="games">Ігровий</a>
+          </li>
+          <li class="dropdown-li">
+            <a class="dropdown-item" href="#" data-category="users">Ознайомчий</a>
           </li>
         </ul>
       </li>
       
-        <a class="links-text" href="#">Наша команда</a>
+        <a class="dropdown-item" href="#">Наша команда</a>
       </li>
       <li>
-        <a class="links-text" href="#">Контакти</a>
+        <a class="dropdown-item" href="#">Контакти</a>
       </li>
     </ul>
     <div class="theme-toggle">
@@ -51,7 +54,7 @@
     <span class="hi-user">Вітаємо, User!</span>
   </nav>
 </header>
-      <section class="modal-window">
+     <section class="modal-window">
     <!-- Перше модальне вікно -->
     <div class="modal-overlay-window" id="welcomeModal">
         <div class="modall-window">
@@ -100,10 +103,11 @@
       <h1>Популярні інтерактивні завдання</h1>
       <hr>
     <main class="main-back">
-      
-   
-    
-<section class="section-section1">
+      <div class="main__bg">
+        <div class="main__content main__content-container container">
+          <div class="numbers_section">
+            
+<section class="section-section1 " data-category="numbers">
     <h2 class="h2-section1">Перевір, в який рік ти народився</h2>
   
     <form id="yearForm" class="form-section1">
@@ -130,7 +134,10 @@
     <hr />
  
   </section>
-    <section>
+          </div>
+
+          <div class="numbers_sections">
+            <section data-category="numbers">
     <div class="container">
         <h1 class="text-1">Вгадай число, яке загадав комп’ютер</h1>
 
@@ -145,67 +152,12 @@
         </div>
     </div>
 </section>
-    <section>
-  <div class="container-num">
-    <h2>Введіть 3 числа</h2>
-    <form id="numForm" novalidate>
-      <input class="input-num" type="number" id="num1" placeholder="Введіть число" required>
-      <input class="input-num" type="number" id="num2" placeholder="Введіть число" required>
-      <input class="input-num" type="number" id="num3" placeholder="Введіть число" required>
-      <div id="max-result" class="result-output" style="margin-top: 10px;"></div>
-    </form>
-  </div>
-</section>
-      <div class="container">
-  <h2>Калькулятор</h2>
-  <div class="calculator">
-    <input type="number" id="num1" placeholder="Введіть число">
+          </div>
 
-    <div class="operations">
-      <button data-op="+">+</button>
-      <button data-op="-">−</button>
-      <button data-op="*">*</button>
-      <button data-op="/">/</button>
-    </div>
+          <div class="games_sections">
 
-    <input type="number" id="num2" placeholder="Введіть число">
-    <button id="equals">=</button>
-    <input type="text" id="result" placeholder="Результат" disabled>
-  </div>
-  </div>
-
-    <div id="game">
-
-    <div id="dino"></div>
-    <div id="ground"></div>
-    <div id="score">Очки: 0</div>
-  </div>
-
-  <script src="/js/dino.js"></script>
-
-  
-
-
-    <div id="game">
-  <h1>Счёт: <span id="score">0</span></h1>
-  <canvas id="gameCanvas" width="800" height="400"></canvas>
-</div>
-<script src="/js/football.js"></script>
-    <section>
-  <div class="container">
-    <div class="container-time">
-      <div class="input-box">
-        <input type="number" id="secondsInput" placeholder="Введіть число">
-        <button class="convertBtn">
-          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAQ5JREFUOI2l0i9PwlEUxvEjbihFTbiRCFQtQLXoC7BrsbupmeJovA8D1RdgsLo5CVZncRoMbP4LOPwYuLrfEH6w+ZS7neec77m794nICE2c4dFIL7jAHhZjmlBAB1/ooYUDHOIcQ1yiPA3QwQAnWJjgN3CPa5TGzWbafDL1iqO+Gvpojxtn6dp/Nk+AnOIZxWzxCa1Zw6l3Iz1u/adWiIj1iHiYBxARd+msZAFvEbEyJ2A1na9ZwFVE7MwJ2I6Iz4jo/VZSSIZo5E1iCbfojhuLKST3qOUMd/GO6qSGcgpJP33VJpZRwX7a/JGbF5TQTv+c1SBtr6ak5ocORdSxiy2sjfmzIbOUgRz/B3KEm29vA1V0zo9TyQAAAABJRU5ErkJggg==" alt="">
-        </button>
-      </div>
-      <div class="divider"></div>
-      <div class="result-sec" id="result-sec"> </div>
-    </div>
-  </div>
-</section>
-    <div class="container-hh">
+           <section data-category="games">
+<div class="container-hh" data-category="games">
     <div class="cont">
         <h2 class="h2-hh">Камінь - ножиці - папір</h2>
         <div class="carts">
@@ -231,7 +183,98 @@
         <button class="selectvar">Варіант комп’ютера</button>
     </div>
 </div>
-    <div class="section-title">
+</section>
+
+          </div>
+
+          <div class="numbers_sections">
+
+             <section data-action="numbers_sections">
+     <div class="container">
+  <h2>Калькулятор</h2>
+  <div class="calculator">
+    <input type="number" id="number-calc1" placeholder="Введіть число">
+
+    <div class="operations_calc">
+      <button data-op="+">+</button>
+      <button data-op="-">−</button>
+      <button data-op="*">*</button>
+      <button data-op="/">/</button>
+    </div>
+
+    <input type="number" id="number-calc2" placeholder="Введіть число">
+    <button id="equals_calc">=</button>
+    <input type="text" id="result_calc" placeholder="Результат" disabled>
+  </div>
+  </div>
+  </section>
+ 
+
+          </div>
+
+          <div class="numbers_sections">
+           <section data-category="numbers">
+  <div class="container">
+    <div class="container-time">
+      <div class="input-box">
+        <input type="number" id="secondsInput" placeholder="Введіть число">
+        <button class="convertBtn">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAQ5JREFUOI2l0i9PwlEUxvEjbihFTbiRCFQtQLXoC7BrsbupmeJovA8D1RdgsLo5CVZncRoMbP4LOPwYuLrfEH6w+ZS7neec77m794nICE2c4dFIL7jAHhZjmlBAB1/ooYUDHOIcQ1yiPA3QwQAnWJjgN3CPa5TGzWbafDL1iqO+Gvpojxtn6dp/Nk+AnOIZxWzxCa1Zw6l3Iz1u/adWiIj1iHiYBxARd+msZAFvEbEyJ2A1na9ZwFVE7MwJ2I6Iz4jo/VZSSIZo5E1iCbfojhuLKST3qOUMd/GO6qSGcgpJP33VJpZRwX7a/JGbF5TQTv+c1SBtr6ak5ocORdSxiy2sjfmzIbOUgRz/B3KEm29vA1V0zo9TyQAAAABJRU5ErkJggg==" alt="">
+        </button>
+      </div>
+      <div class="divider"></div>
+      <div class="result-sec" id="result-sec"> </div>
+    </div>
+  </div>
+</section>
+          </div>
+
+          <div class="games_sections">
+           <section data-category="games">
+  <div id="game">
+
+    <div id="dino"></div>
+    <div id="ground"></div>
+    <div id="score">Очки: 0</div>
+  </div>
+
+  <script src="/js/dino.js"></script>
+
+</section>
+
+  
+
+
+          </div>
+
+          <div class="games_sections">
+          <section data-category="games">
+  <div id="game">
+  <h1>Счёт: <span id="score">0</span></h1>
+  <canvas id="gameCanvas" width="800" height="400"></canvas>
+</div>
+<script src="/js/football.js"></script>
+</section>
+
+          </div>
+
+          <div class="numbers_sections">
+          <section data-category="numbers">
+  <div class="container-num">
+    <h2>Введіть 3 числа</h2>
+    <form id="numForm" novalidate>
+      <input class="input-num" type="number" id="num1" placeholder="Введіть число" required>
+      <input class="input-num" type="number" id="num2" placeholder="Введіть число" required>
+      <input class="input-num" type="number" id="num3" placeholder="Введіть число" required>
+      <div id="max-result" class="result-output" style="margin-top: 10px;"></div>
+    </form>
+  </div>
+</section>
+          </div>
+
+          <div class="users_sections">
+          <section data-category="users">
+  <div class="section-title">
   <h5>Наша Команда</h5>
 </div>
 <div class="carousel-wrapper">
@@ -287,7 +330,12 @@
     </button>
   </div>
 </div>
-    <section class="se-s">
+</section>
+
+          </div>
+
+          <div class="users_sections">
+           <section class="se-s" data-category="users">
     <div class="container-scientists">
       <div class="cont-2">
         <h3 class="select-s">Обери вченого/их</h3>
@@ -317,6 +365,12 @@
       </div>
     </div>
   </section>
+          </div>
+        </div>
+      </div>
+      
+   
+
     </main>
         <body>
         <footer class="coding-magic-footer">
@@ -350,7 +404,7 @@
             <span class="close-btn" id="closeThanks">×</span>
             <div class="modal-overlay-div">
                 <div class="icons">
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFhSURBVHgB7ZY9TgMxFIQHErJADRIH4CpUdIgOkUgcgR6JBgSXoEog5EqIIGhpoEKQLOKN/Kw4q13Yn+cUwEiTlR3rfR47dhb4a1qCvVjzXPye6W9p/xsbbdgrFb+Kp8FE1sVr2j7hxzJs9Sl+FG+IN8Vb4mNxRyeU+oGWYA/dVgCX9kB8JT4SvyCCCH1QGPTZhVvurrafxacwVBkorMGEjktA+fwQn8FAZZPyea/j/6GFWhXvBsWq7OkYNaGJeAJ3JvdRLWltaFsLjuAuARZ5wuyKjQKlEi16rTAWZ/Ie3PXXiwH1IoBn7zYDv4wJ9fLJs/ALnVg0KBMPkJ+cy70Cw3MaQodw/6dFy34XE+qVByd0D7O9NodC233M7/khXPIdNNBP0Bv93o8bad9E+2qLSfoF0KHC/C+5o+OnQV8t8RUoTPQd1KuFhknzIAnml7dRqqrwwaKgIZxJ00VCQ/jv1BfJvoghyZamxwAAAABJRU5ErkJggg==" alt="icon" />
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAM1SURBVHgBzVZfSFNRGD+7+9P+6KZ7cFOZgk5MccNMNvRFCx9CWXtSKiKICJfPEpbZ1oPQXnqTgiiILGovMQODXqIQnyIUQdEgg8QYC3Qy3XRrt98x71h3u+m9bugPLvfe757z/b7vnu/8vkNInsCyrLyrq6uhqKjop1wuTxgMhh8jIyM2aieFhMfjcchkMnZgYMBC38fGxqw0HgRzihQYqUAgYM40jI6OmhiGiSFrGSkgWDF2BZGAiYkJrdfrvaBQKHadRqPR2MLCAjs5Oanv7u7e4MZNT09r2tvbidPpvJxKpZScPRaLbUoiBulQKBQ6bzabv9B3jUZDmpubX+j1+n+yW1xcPNHS0jKeSCTOcrbt7e2t+fn5G0QKQOK12+0+Ih0sQ44IgsSZlViIqmSESMvKyl6RvxXJ1tbWjvOFYGdnR9/T03PN7/c37BcYvu/yuFwud29v7zmhQdTJZklJyTPOVl5e/hgVHOEcOByOmyiocH19/VO8RnBtcd9y+auqquqjjyaT6X1NTc1b7O3fWQMHBwedcLrCj1in0610dnae5JxxWdK70Wh8gkA//Sdzlj8vC42Njd6mpiYv345K9tlstrtEGDmFAnP6keVzvl3R0dFxUalUqjnD+vo6WVpauoTHe2mPiLKiosKFzN5Ae69ydvwyxufzvWxra4tDp3PxEq1WW4z5a3w7HZ3CWj1CR0mTI5DQ7OzsLR7xg9LSUkPmXARpRxG+m5mZiaIO+lZXV0/TRpFJEAwGi91u9wZdLv43IY0VBALwoGA+Wq3W18hojToUWjtKqFarh+mjxWIZbm1tvU2kCkh1dbVJpVKF8Jc2sVTXocNZ2XCAPQVt9k9NTelRoEaMVaWDIiJxJJJJf104HJbUXDIhygFVL/ziX8lkUodOdIccArQg2L37fqRMXV1dMBKJfEc7XJmbm7tPJIKu+65PEXPSCkTyANHE+YCo4sK6fq2srBzO7FSHyf7AWVASul+xjz9AOq/gDP0ZnaqfSICojCkpBEABmXy4vLx8Bh3pWzweNxMJEL0fQU57aYBe6GI+IhHH78x1EECrk0Qq0FITZO9sJfaia46DwxCRgD+2aVuQjvj9xwAAAABJRU5ErkJggg==" alt="icon" />
                     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAInSURBVHgBtVbLSsQwFD2tFZyVq5mF/oE7QcS1P+BPuBKUkdGNiONW3Qp+hQtRQRRXijCIG5cKKvjClQ9Q8TX1XprQTJq0TWfmwKHtTe49yc1NGiDCIzHsEm9hwR1x0mD30Blw7GdTvFB51gR1mwukv6SqYRTW0akZGzUC4g/s4p1CE3lG0wUkNHxkw9OeJpvzsmQJc8AyWgsFSG6ZMgqIpxVXRbRX0Bq4StxCNPCypU+mRugo6gl7j/KdJZ5bOC3QGPEJ6QPN1LCtcdp6cYonUtqbyAlbqk2z7hE2PfW2ZUnTSC0uVZyzw7OtOoo6C+uBbX2zRFFEWB+EfHqWNptPoZMLmjMHW0RURPIAWUO8vdTYq6Jd9q3LfgHcwE4PxBtiifgl7LvEFzEAXwjNExvEXuKvGPARcYo4oM4kDxaIx4hTWEOc+gPiGXGZeE7cQZzROaXfqfh2Eg7Rusaqb4BkEZr69RHfdGMeYYa8ZXwgvqXo9eLDfpsJ1WB5hQPtm6FmIe0A8doR3leE1PuYbXZqP87CdlFhrupNmC8G+rsOrv57juOyjyV4K+xptgbiPa3u7xPEa+8Jv0Hp9If8MGVnHNGF0XSavRJHTXG4UGZFwCUkTx8VnwYbz+YQ0d6tG9o3EGXDhzZoNqwThxD/8mw0nXIzxGvxbvLhk+2SOI02LoaMK+KKcO5HvsKUV6WSeOdjtQFHyCOPA70Th5E9A24fIX4Lvwu2/QNCe8PzxbtIdAAAAABJRU5ErkJggg==" alt="icon" />
                 </div>
                 <h3>Дякую за підписку!</h3>
