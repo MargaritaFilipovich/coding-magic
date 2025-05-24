@@ -31,14 +31,14 @@ body {
     color: black;
   }
 
-  .operations {
+  .operations_calc {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 5px;
   }
 
-  .operations button,
-  #equals {
+  .operations_calc button,
+  #equals_calc {
     background-color: black;
     color: white;
     border-radius: 50%;
@@ -50,6 +50,6 @@ body {
     cursor: pointer;
   }
 
-  #equals {
+  #equals_calc {
     font-weight: bold;
   }

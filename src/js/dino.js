@@ -1,4 +1,4 @@
-/*const game = document.getElementById('game');
+const game = document.getElementById('game');
 const dino = document.getElementById('dino');
 const scoreDisplay = document.getElementById('score');
 
