@@ -12,22 +12,27 @@ body {
 
 .footer-content {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: none;
   justify-content: space-between;
   align-items: flex-start;
 }
 
-.footer-contacts-list-item{
+.footer-contacts-list a{
     color: black;
-    font-size: 12px;
+    font-size: 15px;
     text-decoration: none;
-    line-height: 52px;
-    font-family: 'Montserrat Alternates', sans-serif;
-    font-weight: 600;
-    margin-top: 61px;
-    margin-bottom: 59px;
-    margin-right: 187px;
+    line-height: 20px;
+    list-style: none;
 };
+
+.footer-contacts-list{
+  margin-top: 51px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  text-decoration: none;
+  list-style: none;
+}
 
 .footer-email-input .input{
     background-color: #D7D7D7;
@@ -54,7 +59,7 @@ body {
 .footer-button{
     background-color: black;
     color: white;
-    border-radius: 10px;  
+    border-radius: 40px;  
     font-family: 'Montserrat Alternates', sans-serif;
     font-weight: 400;
     margin-left: 36px;
@@ -62,13 +67,15 @@ body {
     margin-right: 174px;
 };
 
-.logo-footer{
+.footer-email-input{
+  margin-right: -203px;
+}
+
+.img-footer{
     height: 70px;
     width: 165px;
     margin-top: 75px;
     margin-bottom: 75px;
-    margin-left: 175px;
-    margin-right: 185px;
 }
 
 @media (max-width: 768px) {

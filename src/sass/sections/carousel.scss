@@ -6,10 +6,9 @@ body, html {
     .carousel-wrapper {
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      height: 100vh;
-      background-color: #f8f9fa;
+      height: auto;
+      background-color: none;
       text-align: center;
       padding: 1rem;
     }
@@ -53,6 +52,10 @@ body, html {
       color: black;
     }
 
+    .carousel-item h5{
+      margin-top: 10px;
+    }
+
     .carousel-indicators [data-bs-target] {
       width: 30px;
       height: 3px;
@@ -64,6 +67,10 @@ body, html {
       opacity: 0.5;
       transition: 0.3s;
     }   
+
+    .carousel-indicators{
+      bottom: -65px;
+    }
 
     .carousel-indicators .active {
       opacity: 1;
@@ -110,4 +117,25 @@ body, html {
   .carousel-control-next {
     display: none;
   }
+}
+
+.carousel-item .thumb {
+  height: 550px;
+  width: 550px;
+  object-fit: cover;
+  overflow: hidden;
+  display: block;
+  border-radius: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background: none;
+}
+.carousel-control-prev {
+    left: -119px;
+}
+.carousel-control-next {
+    right: -119px;
 }
