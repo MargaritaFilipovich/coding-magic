@@ -1,97 +1,48 @@
-const game = document.getElementById('game');
-const dino = document.getElementById('dino');
-const scoreDisplay = document.getElementById('score');
+ const game = document.getElementById("game");
+    const dino = document.getElementById("dino");
+    const cactus = document.getElementById("cactus");
 
-let isJumping = false;
-let score = 0;
-let gameOver = false;
+    let isRunning = false;
+    let gameInterval = null;
 
-// Прыжок динозавра
-function jump() {
-  if (isJumping) return;
-  isJumping = true;
-  let position = 30; // bottom px
-
-  // Вверх
-  const upInterval = setInterval(() => {
-    if (position >= 150) {
-      clearInterval(upInterval);
-
-      // Вниз
-      const downInterval = setInterval(() => {
-        if (position <= 30) {
-          clearInterval(downInterval);
-          isJumping = false;
+    document.addEventListener("keydown", function (e) {
+      if (e.key.toLowerCase() === "w") {
+        if (!isRunning) {
+          startGame();
+        } else {
+          jump();
         }
-        position -= 10;
-        dino.style.bottom = position + 'px';
-      }, 20);
-    } else {
-      position += 10;
-      dino.style.bottom = position + 'px';
-    }
-  }, 20);
-}
-
-// Создаем препятствия
-function createObstacle() {
-  if (gameOver) return;
-
-  const obstacle = document.createElement('div');
-  obstacle.classList.add('obstacle');
-  obstacle.style.left = '800px';
-  game.appendChild(obstacle);
-
-  let obstaclePos = 800;
-  const obstacleSpeed = 6;
-
-  const moveObstacle = setInterval(() => {
-    if (gameOver) {
-      clearInterval(moveObstacle);
-      if (obstacle.parentElement) {
-        obstacle.parentElement.removeChild(obstacle);
       }
-      return;
+    });
+
+    function startGame() {
+      game.classList.remove("hidden");
+      cactus.style.right = "-20px";
+      cactus.style.animation = "moveCactus 2s linear infinite";
+      isRunning = true;
+
+      gameInterval = setInterval(() => {
+        const dinoBottom = parseInt(getComputedStyle(dino).bottom);
+        const cactusRight = parseInt(getComputedStyle(cactus).right);
+        const cactusLeft = 800 - cactusRight;
+
+        if (cactusLeft > 50 && cactusLeft < 90 && dinoBottom < 40) {
+          resetGame();
+        }
+      }, 10);
     }
 
-    obstaclePos -= obstacleSpeed;
-    obstacle.style.left = obstaclePos + 'px';
-
-    // Проверка столкновения
-    const dinoRect = dino.getBoundingClientRect();
-    const obsRect = obstacle.getBoundingClientRect();
-
-    if (
-      obsRect.left < dinoRect.right &&
-      obsRect.right > dinoRect.left &&
-      obsRect.bottom > dinoRect.top &&
-      obsRect.top < dinoRect.bottom
-    ) {
-      gameOver = true;
-      alert('Game Over! Очки: ' + score);
-      location.reload();
+    function resetGame() {
+      clearInterval(gameInterval);
+      cactus.style.animation = "none";
+      cactus.style.right = "-20px";
+      game.classList.add("hidden");
+      isRunning = false;
     }
 
-    // Увеличение очков, когда препятствие пройдено
-    if (obstaclePos < 0) {
-      clearInterval(moveObstacle);
-      if (obstacle.parentElement) {
-        obstacle.parentElement.removeChild(obstacle);
+    function jump() {
+      if (!dino.classList.contains("jump")) {
+        dino.classList.add("jump");
+        setTimeout(() => dino.classList.remove("jump"), 500);
       }
-      score++;
-      scoreDisplay.textContent = 'Очки: ' + score;
     }
-  }, 20);
-
-  // Следующее препятствие через рандомный интервал
-  setTimeout(createObstacle, 1500 + Math.random() * 2000);
-}
-
-// Запуск игры
-document.addEventListener('keydown', e => {
-  if ((e.code === 'Space' || e.code === 'ArrowUp') && !gameOver) {
-    jump();
-  }
-});
-
-createObstacle();
