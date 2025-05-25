@@ -9,7 +9,7 @@
     <title></title>
     <script type="module" crossorigin src="./commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="./assets/vendor-6837a909.js">
-    <link rel="stylesheet" href="./assets/index-3c081513.css">
+    <link rel="stylesheet" href="./assets/index-baf580c5.css">
   </head>
   <body class="no-scroll">
 
@@ -230,17 +230,15 @@
           </div>
 
           <div class="games_sections">
-           <section data-category="games">
-  <div id="game">
-
+            <h2>Google динозавр</h2>
+  <div id="game" class="game hidden">
     <div id="dino"></div>
-    <div id="ground"></div>
-    <div id="score">Очки: 0</div>
+    <div id="cactus"></div>
   </div>
-
+  <p>Нажми <strong>W</strong> чтобы начать и прыгать</p>
   <script src="/js/dino.js"></script>
 
-</section>
+
 
   
 
@@ -248,13 +246,14 @@
           </div>
 
           <div class="games_sections">
-          <section data-category="games">
-  <div id="game">
-  <h1>Счёт: <span id="score">0</span></h1>
-  <canvas id="gameCanvas" width="800" height="400"></canvas>
-</div>
+          <div class="fball-container">
+<div class="field">
+    <div id="ball"></div>
+    <div id="goal"></div>
+  </div>
+  </div>
 <script src="/js/football.js"></script>
-</section>
+
 
           </div>
 
